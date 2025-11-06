@@ -28,13 +28,13 @@ app.use((req, res, next) => {
 
 app.use(methodOverride('_method'));
 
-app.set('views', `${_dirname}/views`);
+app.set('views', `${__dirname}/views`);
 app.set('view engine', 'pug');
 
 // App Locals Variables
 app.locals.prefixAdmin = systemConfig.prefixAdmin;
 
-app.use(express.static(`${_dirname}/public`));
+app.use(express.static(`${__dirname}/public`));
 
 //Route
 route(app);

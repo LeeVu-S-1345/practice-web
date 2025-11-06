@@ -74,7 +74,7 @@ module.exports.submitCreate = async (req, res) => {
         req.body.thumbnail = `/uploads/${req.file.filename}`;
     }
 
-    // await Product.create(req.body);
+    await Product.create(req.body);
     res.redirect(`${systemConfig.prefixAdmin}/products`);
 };
 
